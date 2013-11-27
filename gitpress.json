@@ -9,7 +9,7 @@
 		".*"                   : "text"
 	},
 	"title"  : "CSS探索之旅",
-	"comment"  : {"type": "duoshuo", "short_name":"doyoe"},
+	"comment"  : {"type": "duoshuo", "short_name": "doyoe"},
 	"domain-alias"  : ["blog.doyoe.com"],
 	"friends"  : [
 		{
