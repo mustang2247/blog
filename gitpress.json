@@ -1,7 +1,7 @@
 {
 	"docs"      : ["posts"],
 	"perpage"   : 10,
-	"template"  : "tactile", // default、slate、tactile、phase、pithiness
+	"template"  : "phase", // default、slate、tactile、phase、pithiness
 	"types"     : {
 		"\\.(md||markdown)$"   : "markdown",
 		"\\.(js||css||json)$"  : "code",
