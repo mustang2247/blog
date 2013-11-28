@@ -1,4 +1,4 @@
 飘零雾雨的博客
 ====
 
-blog
+飘零雾雨的博客 http://blog.doyoe.com/
