@@ -48,7 +48,7 @@ auto是margin的可选值之一。相信大家平时使用auto值时，最多的
 </div>
 ```
 
-为了更明显点，我们来看个例子：[margin实现块元素水平居中](http://demo.doyoe.com/css/margin/horizontal-center.htm)。Cool，这么简单就实现了水平居中。
+为了更明显点，我们来看个例子：[margin实现块元素水平居中](//demo.doyoe.com/css/margin/horizontal-center.htm)。Cool，这么简单就实现了水平居中。
 
 不过你可能也发现了不论是 `margin: auto;` 还是 `margin: 0 auto;` 效果都是一样的，都是让 #demo 水平居中了，但纵向并没有任何变化。
 
@@ -60,9 +60,9 @@ auto是margin的可选值之一。相信大家平时使用auto值时，最多的
 >
 > 翻译：如果场景是A和C，那么其 `auto` 计算值为 `0`。
 >
-> ![margin edge](http://demo.doyoe.com/css/margin/images/margin.png)
+> ![margin edge](//demo.doyoe.com/css/margin/images/margin.png)
 >
-> 更详细请参阅：[margin properties](http://dev.w3.org/csswg/css-box/#the-margin-properties)
+> 更详细请参阅：[margin properties](//dev.w3.org/csswg/css-box/#the-margin-properties)
 
 由此可见，它们还与书写模式 `writing-mode` 和 文档流方向 `direction` 有关。所以我们说 `margin: auto;` 等同于 `margin: 0 auto;` 是不太精准的，因为还有前置条件。
 
@@ -99,7 +99,7 @@ OK，聊了这么多，我们回到默认的 `writing-mode: horizontal-tb;` 和 
 </div>
 ```
 
-结果你猜到了吗？没猜到也不怕，用事实说话：[margin-left关键字auto结果猜想](http://demo.doyoe.com/css/margin/margin-left-auto.htm)。
+结果你猜到了吗？没猜到也不怕，用事实说话：[margin-left关键字auto结果猜想](//demo.doyoe.com/css/margin/margin-left-auto.htm)。
 
 好了，结果得到了，p相对于包含块右对齐了，这与规范描述一致。`margin-left:auto;` 自动占据了包含块的可用空间，即 500 - 100px = 400px。也就是说auto最后的计算值为400px，即 `margin-left:400px;`。所以 `margin-right:auto;` 的结果会相当于左对齐。
 
