@@ -50,6 +50,11 @@ auto是margin的可选值之一。相信大家平时使用auto值时，最多的
 
 不过你可能也发现了不论是 `margin: auto;` 还是 `margin: 0 auto;` 效果都是一样的，都是让 #demo 水平居中了，但纵向并没有任何变化。
 
-大家都知道 `margin` 是符合属性，也就是说 `margin: auto;` 其实相当于 `margin: auto auto auto auto;`，`margin: 0 auto;`相当于 `margin: 0 auto 0 auto;`，至于CSS中的上、右、下、左顺序就不做赘述了。
+大家都知道 `margin` 是符合属性，也就是说 `margin: auto;` 其实相当于 `margin: auto auto auto auto;`，`margin: 0 auto;`相当于 `margin: 0 auto 0 auto;`，四个值分别对应上右下左。至于CSS中的上、右、下、左顺序就不做赘述了。
+
+根据规范，`margin-top: auto;` 和 `margin-bottom: auto;`，其计算值为0。这也就解释了为什么 `margin: auto;` 等同于 `margin: 0 auto;`。
+
+> On the A edge and C edge, the used value of ‘auto’ is 0.
+> ![margin edge](http://demo.doyoe.com/css/margin/images/margin.png)
 
 待续。。。
