@@ -28,6 +28,8 @@ margin作为CSS盒模型基本组成要素之一，是非常Basis的一个技术
 
 <!--more-->
 
+### keyword auto
+
 auto是margin的可选值之一。相信大家平时使用auto值时，最多的用法大概是 `margin: 0 auto;` 和 `margin: auto;`，恩，是的，块元素水平居中。让我们来看看代码实现：
 
 ### CSS:
@@ -52,7 +54,7 @@ auto是margin的可选值之一。相信大家平时使用auto值时，最多的
 
 大家都知道 `margin` 是符合属性，也就是说 `margin: auto;` 其实相当于 `margin: auto auto auto auto;`，`margin: 0 auto;`相当于 `margin: 0 auto 0 auto;`，四个值分别对应上右下左。至于CSS中的上、右、下、左顺序就不做赘述了。
 
-根据规范，`margin-top: auto;` 和 `margin-bottom: auto;`，其计算值为0。这也就解释了为什么 `margin: auto;` 等同于 `margin: 0 auto;`。
+根据规范，`margin-top: auto;` 和 `margin-bottom: auto;`，其计算值为0。这也就解释了为什么 `margin: auto;` 等同于 `margin: 0 auto;`。但仅此而已吗？让我们来看看规范描述：
 
 > 原文：On the A edge and C edge, the used value of ‘auto’ is 0.
 >
@@ -60,7 +62,8 @@ auto是margin的可选值之一。相信大家平时使用auto值时，最多的
 >
 > ![margin edge](http://demo.doyoe.com/css/margin/images/margin.png)
 >
-> 更详细请参与：[margin properties](http://dev.w3.org/csswg/css-box/#the-margin-properties)
+> 更详细请参阅：[margin properties](http://dev.w3.org/csswg/css-box/#the-margin-properties)
 
+由此可见，它们还与书写模式 `writing-mode` 和 文档流方向 `direction` 有关。
 
 待续。。。
