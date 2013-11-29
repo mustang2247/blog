@@ -28,25 +28,26 @@ margin作为CSS盒模型基本组成要素之一，是非常Basis的一个技术
 
 今天要讲的其实只是其中很少的一部分，恩，标题里有：keyword auto
 
-auto是margin的可选值之一。相信大家平时使用auto值时，最多的用法大概是 `margin: 0 auto;` 和 `margin: auto;`，恩，是的，块元素水平居中。
+auto是margin的可选值之一。相信大家平时使用auto值时，最多的用法大概是 `margin: 0 auto;` 和 `margin: auto;`，恩，是的，块元素水平居中。让我们来看看代码实现：
 
-### 看看块元素居中所要的代码：
+### CSS：
 
 ```css
-<style>
 #demo{
 	width: 500px;
 	margin: auto; /* 或者 margin: 0 auto; */
 }
-</style>
 ```
 
+### HTML
 ```html
 <div id="demo">
 	<p>恩，我就是那个需要水平居中的家伙。</p>
 </div>
 ```
 
-为了更明显点，我们来看个例子：[margin实现块元素水平居中](hhttp://demo.doyoe.com/css/margin/horizontal-center.htm)
+为了更明显点，我们来看个例子：[margin实现块元素水平居中](http://demo.doyoe.com/css/margin/horizontal-center.htm)。Cool，这么简单就实现了水平居中。
+
+不过你可能也发现了不论是 `margin: auto;` 还是 `margin: 0 auto;` 效果都是一样的，都是让 #demo 水平居中了。
 
 待续。。。
