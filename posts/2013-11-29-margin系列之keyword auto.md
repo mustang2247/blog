@@ -52,7 +52,7 @@ auto是margin的可选值之一。相信大家平时使用auto值时，最多的
 
 不过你可能也发现了不论是 `margin: auto;` 还是 `margin: 0 auto;` 效果都是一样的，都是让 #demo 水平居中了，但纵向并没有任何变化。
 
-大家都知道 `margin` 是符合属性，也就是说 `margin: auto;` 其实相当于 `margin: auto auto auto auto;`，`margin: 0 auto;`相当于 `margin: 0 auto 0 auto;`，四个值分别对应上右下左。至于CSS中的上、右、下、左顺序就不做赘述了。
+大家都知道 `margin` 是复合属性，也就是说 `margin: auto;` 其实相当于 `margin: auto auto auto auto;`，`margin: 0 auto;`相当于 `margin: 0 auto 0 auto;`，四个值分别对应上右下左。至于CSS中的上、右、下、左顺序就不做赘述了。
 
 根据规范，`margin-top: auto;` 和 `margin-bottom: auto;`，其计算值为0。这也就解释了为什么 `margin: auto;` 等同于 `margin: 0 auto;`。但仅此而已吗？让我们来看看规范描述：
 
@@ -64,6 +64,33 @@ auto是margin的可选值之一。相信大家平时使用auto值时，最多的
 >
 > 更详细请参阅：[margin properties](http://dev.w3.org/csswg/css-box/#the-margin-properties)
 
-由此可见，它们还与书写模式 `writing-mode` 和 文档流方向 `direction` 有关。
+由此可见，它们还与书写模式 `writing-mode` 和 文档流方向 `direction` 有关。所以我们说 `margin: auto;` 等同于 `margin: 0 auto;` 是不太精准的，因为还有前置条件。
+
+了解这些很重要，这有助于理解 `margin` 属性的设计意图。
+
+OK，聊了这么多，我们回到默认的 `writing-mode: horizontal-tb;` 和 `direction: ltr;` 的情况继续往下。 
+
+### 为什么auto能实现水平居中？
+
+这是因为水平方向的auto，其计算值取决于可用空间（剩余空间）。想象这样一个场景，一个宽100px的p被包含在一个宽500px的div内，此时设置p 的 margin-left 值为 auto，大家觉得结果会怎样？
+
+### CSS:
+
+```css
+#demo{
+	width: 500px;
+}
+#demo p{
+	margin-left: auto;
+}
+```
+
+### HTML:
+```html
+<div id="demo">
+	<p>恩，我就是那个p。</p>
+</div>
+```
+
 
 待续。。。
