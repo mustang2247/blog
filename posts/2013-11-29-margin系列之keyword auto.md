@@ -13,8 +13,6 @@ margin作为CSS盒模型基本组成要素之一，是非常Basis的一个技术
 * 处理特殊的first或last，大家懂的？
 * 一些布局；
 
-<!--more-->
-
 ### 需要注意的地方：
 
 * margin折叠；
@@ -28,9 +26,11 @@ margin作为CSS盒模型基本组成要素之一，是非常Basis的一个技术
 
 今天要讲的其实只是其中很少的一部分，恩，标题里有：keyword auto
 
+<!--more-->
+
 auto是margin的可选值之一。相信大家平时使用auto值时，最多的用法大概是 `margin: 0 auto;` 和 `margin: auto;`，恩，是的，块元素水平居中。让我们来看看代码实现：
 
-### CSS：
+### CSS:
 
 ```css
 #demo{
@@ -39,7 +39,7 @@ auto是margin的可选值之一。相信大家平时使用auto值时，最多的
 }
 ```
 
-### HTML
+### HTML:
 ```html
 <div id="demo">
 	<p>恩，我就是那个需要水平居中的家伙。</p>
@@ -48,6 +48,8 @@ auto是margin的可选值之一。相信大家平时使用auto值时，最多的
 
 为了更明显点，我们来看个例子：[margin实现块元素水平居中](http://demo.doyoe.com/css/margin/horizontal-center.htm)。Cool，这么简单就实现了水平居中。
 
-不过你可能也发现了不论是 `margin: auto;` 还是 `margin: 0 auto;` 效果都是一样的，都是让 #demo 水平居中了。
+不过你可能也发现了不论是 `margin: auto;` 还是 `margin: 0 auto;` 效果都是一样的，都是让 #demo 水平居中了，但纵向并没有任何变化。
+
+大家都知道 `margin` 是符合属性，也就是说 `margin: auto;` 其实相当于 `margin: auto auto auto auto;`，`margin: 0 auto;`相当于 `margin: 0 auto 0 auto;`，至于CSS中的上、右、下、左顺序就不做赘述了。
 
 待续。。。
