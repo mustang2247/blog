@@ -68,11 +68,17 @@ auto是margin的可选值之一。相信大家平时使用auto值时，最多的
 
 了解这些很重要，这有助于理解 `margin` 属性的设计意图。
 
-OK，聊了这么多，我们回到默认的 `writing-mode: horizontal-tb;` 和 `direction: ltr;` 的情况继续往下。 
+OK，聊了这么多，我们回到默认的 `writing-mode: horizontal-tb;` 和 `direction: ltr;` 的情况继续往下，后面的话题都基于这个前提。 
 
 ### 为什么auto能实现水平居中？
 
-这是因为水平方向的auto，其计算值取决于可用空间（剩余空间）。想象这样一个场景，一个宽100px的p被包含在一个宽500px的div内，此时设置p 的 margin-left 值为 auto，大家觉得结果会怎样？
+这是因为水平方向的 `auto`，其计算值取决于可用空间（剩余空间）。
+
+> 原文：On the B edge and D edge, the used value depends on the available space.
+>
+> 翻译：如果场景是B和D，那么其 `auto` 计算值取决于可用空间。
+
+想象这样一个场景，一个宽100px的p被包含在一个宽500px的div内，此时设置 p 的 margin-left 值为 auto，大家觉得结果会怎样？
 
 ### CSS:
 
@@ -81,6 +87,7 @@ OK，聊了这么多，我们回到默认的 `writing-mode: horizontal-tb;` 和 
 	width: 500px;
 }
 #demo p{
+	width: 100px;
 	margin-left: auto;
 }
 ```
@@ -92,5 +99,8 @@ OK，聊了这么多，我们回到默认的 `writing-mode: horizontal-tb;` 和 
 </div>
 ```
 
+结果你猜到了吗？没猜到也不怕，我用事实说话：[margin-left关键字auto结果猜想](http://demo.doyoe.com/css/margin/margin-left-auto.htm)。
+
+好了，结果得到了，p相对于包含块右对齐了，这与规范描述一致。`margin-left:auto;` 自动占据了包含块的可用空间，即 500 - 100px = 400px。也就是说auto最后的计算值为400px，即 `margin-left:400px;`。所以 `margin-right:auto;` 的结果会相当于左对齐。
 
 待续。。。
