@@ -28,6 +28,19 @@ margin作为CSS盒模型基本组成要素之一，是非常Basis的一个技术
 
 今天要讲的其实只是其中很少的一部分，恩，标题里有：keyword auto
 
-auto是margin的可选值之一。相信大家平时使用auto值时，最多的用法大概是 `margin: 0 auto;` 和 `margin: auto;`，恩，是的，块元素水平居中。
+auto是margin的可选值之一。相信大家平时使用auto值时，最多的用法大概是 `margin: 0 auto;` 和 `margin: auto;`，恩，是的，块元素水平居中。看看代码：
+
+```
+<style>
+#demo{
+	width: 500px;
+	margin: auto; /* 或者 margin: 0 auto; */
+}
+</style>
+
+<div id="demo">
+	<p>恩，我就是那个需要水平居中的家伙。</p>
+</div>
+```
 
 待续。。。
