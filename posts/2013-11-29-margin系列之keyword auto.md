@@ -13,14 +13,15 @@ margin作为CSS盒模型基本组成要素之一，是非常Basis的一个技术
 * 处理特殊的first或last，大家懂的？
 * 一些布局；
 
+<!--more-->
+
 ### 需要注意的地方
 
 * margin折叠；
 * margin的百分比值；
 * margin的auto值；
+* margin和相对偏移top, right, bottom, left的异同；
 * IE6浮动双margin Bug；
 * IE6浮动相邻元素3px Bug；
 
-<!--more-->
-
-这个形式的博客真心太适合我了，完全可以随意写，不用太care格式。
+看起来似乎有不少的知识点？恩，这些都是我们需要了解的，包括一些没有被列举出来的点。
