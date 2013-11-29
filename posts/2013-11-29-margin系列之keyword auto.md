@@ -39,10 +39,14 @@ auto是margin的可选值之一。相信大家平时使用auto值时，最多的
 	margin: auto; /* 或者 margin: 0 auto; */
 }
 </style>
+```
 
+```html
 <div id="demo">
 	<p>恩，我就是那个需要水平居中的家伙。</p>
 </div>
 ```
+
+为了更明显点，我们来看个例子：[margin实现块元素水平居中](hhttp://demo.doyoe.com/css/margin/horizontal-center.htm)
 
 待续。。。
