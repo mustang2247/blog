@@ -107,7 +107,10 @@ OK，聊了这么多，我们回到默认的 `writing-mode: horizontal-tb;` 和 
 
 至于垂直方向上为什么无法居中，还有更深层的原因吗？大家可以思考一下。
 
-参考：
+可参考：
+
 http://www.w3.org/TR/css3-box/#margins
+
 http://dev.w3.org/csswg/css-box/#the-margin-properties
+
 http://dev.w3.org/csswg/css-box/#Calculating
