@@ -54,7 +54,10 @@ auto是margin的可选值之一。相信大家平时使用auto值时，最多的
 
 根据规范，`margin-top: auto;` 和 `margin-bottom: auto;`，其计算值为0。这也就解释了为什么 `margin: auto;` 等同于 `margin: 0 auto;`。
 
-> On the A edge and C edge, the used value of ‘auto’ is 0.
+> 原文：On the A edge and C edge, the used value of ‘auto’ is 0.
+> 翻译：如果场景是A和C，那么其 `auto` 计算值为 `0`。
 > ![margin edge](http://demo.doyoe.com/css/margin/images/margin.png)
+> 更详细请参与：[margin properties](http://dev.w3.org/csswg/css-box/#the-margin-properties)
+
 
 待续。。。
