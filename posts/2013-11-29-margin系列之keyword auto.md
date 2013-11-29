@@ -99,8 +99,15 @@ OK，聊了这么多，我们回到默认的 `writing-mode: horizontal-tb;` 和 
 </div>
 ```
 
-结果你猜到了吗？没猜到也不怕，我用事实说话：[margin-left关键字auto结果猜想](http://demo.doyoe.com/css/margin/margin-left-auto.htm)。
+结果你猜到了吗？没猜到也不怕，用事实说话：[margin-left关键字auto结果猜想](http://demo.doyoe.com/css/margin/margin-left-auto.htm)。
 
 好了，结果得到了，p相对于包含块右对齐了，这与规范描述一致。`margin-left:auto;` 自动占据了包含块的可用空间，即 500 - 100px = 400px。也就是说auto最后的计算值为400px，即 `margin-left:400px;`。所以 `margin-right:auto;` 的结果会相当于左对齐。
 
 到这里，相信大家都知道为什么 `margin: auto;` 和 `margin: 0 auto;` 能实现水平居中了。因为左右方向的auto值均分了可用空间，使得块元素得以在包含块内居中显示。
+
+至于垂直方向上为什么无法居中，还有更深层的原因吗？大家可以思考一下。
+
+参考：
+http://www.w3.org/TR/css3-box/#margins
+http://dev.w3.org/csswg/css-box/#the-margin-properties
+http://dev.w3.org/csswg/css-box/#Calculating
