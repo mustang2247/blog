@@ -1,36 +1,43 @@
 {
-	"docs" : {"CSS": "posts/css", "HTML": "posts/html", "生活随笔": "posts/life", "关于我": "posts/about-me"}
-	"perpage"   : 10,
-	"template"  : "pithiness", // default、slate、tactile、phase、pithiness
-	"types"     : {
+	"docs"        : {
+		"关于我": "posts/about-me",
+		"关于我的博客": "README.md"
+		"CSS": "posts/css",
+		"HTML": "posts/html",
+		"生活随笔": "posts/life",
+		
+	}
+	"perpage"     : 10,
+	"template"    : "pithiness", // default、slate、tactile、phase、pithiness
+	"types"       : {
 		"\\.(md||markdown)$"   : "markdown",
 		"\\.(js||css||json)$"  : "code",
 		"\\.html?$"            : "html",
 		".*"                   : "text"
 	},
-	"title"  : "CSS探索之旅",
-	"comment"  : {"type": "duoshuo", "short_name": "doyoe"},
-	"domain-alias"  : ["blog.doyoe.com"],
+	"title"       : "CSS探索之旅",
+	"comment"     : {"type": "duoshuo", "short_name": "doyoe"},
+	"domain-alias": ["blog.doyoe.com"],
 	"friends"  : [
 		{
-		"name"  : "JerryQu的小站",
-		"title"  : "屈屈的博客",
+		"name" : "JerryQu的小站",
+		"title": "屈屈的博客",
 		"url"  : "http://imququ.com"
 		},
 		{
-		"name"  : "月影MM",
-		"title" : "十年踪迹的博客",
+		"name" : "月影MM",
+		"title": "十年踪迹的博客",
 		"url"  :  "http://blog.silverna.org/"
 		},
 		{
-		"name"  : "奇舞团",
-		"title"  : "奇舞团官方博客",
+		"name" : "奇舞团",
+		"title": "奇舞团官方博客",
 		"url"  : "http://www.75team.com/"
 		},
 		{
 		"name" : "奇舞周刊",
-		"title" : "奇舞周刊",
-		"url" : "http://www.75team.com/weekly/"
+		"title": "奇舞周刊",
+		"url"  : "http://www.75team.com/weekly/"
 		}
 	]
 }
