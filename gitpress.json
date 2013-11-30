@@ -5,7 +5,7 @@
 		"CSS"         : "posts/css",
 		"HTML"        : "posts/html",
 		"生活随笔"    : "posts/life"
-	}
+	},
 	"perpage"     : 10,
 	"template"    : "pithiness", // default、slate、tactile、phase、pithiness
 	"types"       : {
