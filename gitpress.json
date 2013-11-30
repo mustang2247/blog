@@ -3,8 +3,7 @@
 		"CSS"         : "posts/css",
 		"HTML"        : "posts/html",
 		"生活随笔"    : "posts/life",
-		"关于我"      : "about-me.md",
-		"关于我的博客": "README.md"
+		"关于我"      : "posts/about"
 	},
 	"perpage"     : 10,
 	"template"    : "pithiness", // default、slate、tactile、phase、pithiness
@@ -27,6 +26,11 @@
 		"name" : "月影MM",
 		"title": "十年踪迹的博客",
 		"url"  :  "http://blog.silverna.org/"
+		},
+		{
+		"name" : "dh20156",
+		"title": "dh20156踪迹",
+		"url"  :  "http://www.w3cgroup.com/"
 		},
 		{
 		"name" : "奇舞团",
