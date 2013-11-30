@@ -4,7 +4,7 @@
 
 帝都，一个充满人肉吸尘器的地方，我也是其中的一个。我在 [去哪儿](http://www.qunar.com/)，对去哪儿感兴趣的童鞋，艾特我吧 [@doyoe](http://weibo.com/doyoe)。
 
-### 我的站点
+### 我的站点：
 * [飘雨社区](http://www.doyoe.com/) 已经挂了，等待时机开启 :)
 * [CSS探索之旅](http://blog.doyoe.com/) [View on GitHub](https://github.com/doyoe/blog)
 * [Web前端实验室](http://demo.doyoe.com/)
