@@ -32,7 +32,7 @@ margin作为CSS盒模型基本组成要素之一，是非常Basis的一个技术
 
 auto是margin的可选值之一。相信大家平时使用auto值时，最多的用法大概是 `margin: 0 auto;` 和 `margin: auto;`，恩，是的，块元素水平居中。让我们来看看代码实现：
 
-### CSS:
+#### CSS:
 
 ```css
 #demo{
@@ -41,7 +41,7 @@ auto是margin的可选值之一。相信大家平时使用auto值时，最多的
 }
 ```
 
-### HTML:
+#### HTML:
 ```html
 <div id="demo">
 	<p>恩，我就是那个需要水平居中的家伙。</p>
