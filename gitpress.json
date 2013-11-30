@@ -1,5 +1,5 @@
 {
-	"docs"      : ["posts"],
+	"docs" : {"CSS": "posts/css", "HTML": "posts/html", "生活随笔": "posts/life", "关于我": "posts/about-me"}
 	"perpage"   : 10,
 	"template"  : "pithiness", // default、slate、tactile、phase、pithiness
 	"types"     : {
@@ -20,12 +20,12 @@
 		{
 		"name"  : "月影MM",
 		"title" : "十年踪迹的博客",
-		"url"  :  "http://blog.weizoo.com/"
+		"url"  :  "http://blog.silverna.org/"
 		},
 		{
 		"name"  : "奇舞团",
 		"title"  : "奇舞团官方博客",
-		"url"  : "http://www.75team.com"
+		"url"  : "http://www.75team.com/"
 		},
 		{
 		"name" : "奇舞周刊",
