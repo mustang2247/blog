@@ -107,12 +107,13 @@ OK，聊了这么多，我们回到默认的 `writing-mode: horizontal-tb;` 和 
 
 至于垂直方向上为什么无法居中，还有更深层的原因吗？大家可以思考一下。
 
-### margin系列文章：
-* [margin系列之keyword auto](http://blog.doyoe.com/~posts/css/2013-11-29-margin%E7%B3%BB%E5%88%97%E4%B9%8Bkeyword%20auto.md)
-* [margin系列之百分比](http://blog.doyoe.com/~posts/css/2013-11-30-margin%E7%B3%BB%E5%88%97%E4%B9%8B%E7%99%BE%E5%88%86%E6%AF%94.md)
-
 ### 可参考：
 
 * http://www.w3.org/TR/css3-box/#margins
 * http://dev.w3.org/csswg/css-box/#the-margin-properties
 * http://dev.w3.org/csswg/css-box/#Calculating
+
+### margin系列文章：
+
+* [margin系列之keyword auto](http://blog.doyoe.com/~posts/css/2013-11-29-margin%E7%B3%BB%E5%88%97%E4%B9%8Bkeyword%20auto.md)
+* [margin系列之百分比](http://blog.doyoe.com/~posts/css/2013-11-30-margin%E7%B3%BB%E5%88%97%E4%B9%8B%E7%99%BE%E5%88%86%E6%AF%94.md)
