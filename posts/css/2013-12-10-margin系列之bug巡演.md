@@ -47,13 +47,33 @@
 
 图二 是IE6下的效果
 
-从图一和图二的对比，我们肉眼就可以发现区别。是的，IE6下左边的外边距变成了 `margin-left` 指定值的2倍，而其它浏览器下正常，这就是经典的IE6浮动元素双倍边距bug。来看看具体的例子：`DEMO1`[IE6浮动元素双倍margin bug重现](http://demo.doyoe.com/css/margin/bug/double-margin.html)
+从图一和图二的对比，我们肉眼就可以发现区别。是的，IE6下左边的外边距变成了 `margin-left` 指定值的2倍，而其它浏览器下正常，这就是经典的IE6浮动元素双倍边距bug。来看看具体的例子：`DEMO1` [IE6浮动元素双倍margin bug重现](http://demo.doyoe.com/css/margin/bug/double-margin.html)
 
 很开心告诉你，问题要比这还更复杂一些，接着往下看。
 
 #### 同个浮动方向的元素只有第一个元素会double margin
 
+`double margin` 并不会发生在所有的浮动元素上，同个包含块内，在相同的浮动方向上，它只发生在第一个浮动元素上。
 
+用代码说话：
+
+#### HTML
+
+    <div id="demo">
+        <p>第一个float:left</p>
+        <p>第二个float:left</p>
+        <p>第三个float:left</p>
+    </div>
+
+CSS Code不变，加多2个浮动元素，再来看具体情况，有图有真相：
+
+![同个浮动方向的元素只有第一个元素会double margin](http://demo.doyoe.com/css/margin/images/double-margin-only-first-child-on-ie6.png) （图三）
+
+看到图三结果一目了然，三个 `float:left` 的元素只有第一个元素才 `double margin` 了。用个例子来终结它：`DEMO2` [同个浮动方向的元素只有第一个元素会double margin](http://demo.doyoe.com/css/margin/bug/double-margin-2.html)
+
+#### double margin只发生在float:left时？
+
+你觉得呢？结果当然不会是这样。往前看，我们只说过在同个浮动方向的第一个浮动元素会double margin，并没有说 `float:left`
 
 未完待续。。。
 
