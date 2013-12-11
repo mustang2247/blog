@@ -145,7 +145,7 @@ CSS Code不变，加多2个浮动元素，再来看具体情况，有图有真�
 
 CSS Code中，我们同时设置了 `margin-top/bottom` 的值都为 10px。你预期会 double 的方向是 top or bottom？不太确定？看到 `图六` 你就知道了：
 
-![书写模式改变IE6浮动双倍margin bug方向](http://demo.doyoe.com/css/margin/images/double-margin-writing-mode-on-ie5.png) （图六）
+![书写模式改变IE6浮动双倍margin bug方向](http://demo.doyoe.com/css/margin/images/double-margin-writing-mode-on-ie6.png) （图六）
 
 图六清晰的验证了 `writing-mode` 会影响 double margin 的方向；并且当设置了 `float:right` 时，只有 `margin-bottom` 会 double。看看示例吧：`DEMO5` [书写模式改变IE6浮动双倍margin bug方向](http://demo.doyoe.com/css/margin/bug/double-margin-tbrl.html)
 
@@ -155,9 +155,9 @@ CSS Code中，我们同时设置了 `margin-top/bottom` 的值都为 10px。你�
 
 我们只简单的将 `DEMO5` 中的CSS改成 `float:left` 其余不变，于是得到 `图七` 如下：
 
-![书写模式改变IE6浮动双倍margin bug方向](http://demo.doyoe.com/css/margin/images/double-margin-writing-mode-on-ie6.png) （图七）
+![书写模式改变IE6浮动双倍margin bug方向](http://demo.doyoe.com/css/margin/images/double-margin-writing-mode-on-ie6-2.png) （图七）
 
-你会惊讶的发现，`margin-top/bottom` 两个方向都出现了 double，这真是一件好神奇的事，说实话，我也不明白。
+你会惊讶的发现，`margin-top/bottom` 两个方向都出现了 double，这真是一件好神奇的事，说实话，我也不明白。事实胜于雄辩：`DEMO6` [书写模式改变IE6浮动双倍margin bug方向](http://demo.doyoe.com/css/margin/bug/double-margin-tbrl-2.html)
 
 未完待续。。。
 
