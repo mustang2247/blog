@@ -2,7 +2,7 @@
 
 ### 我所知道的浏览器margin bug
 
-* IE6浮动双margin bug；
+* IE6浮动双倍margin bug；
 * IE6浮动相邻元素3px bug；
 * IE6/7 clear引发的margin-top bug；
 * 待补充有一堆
@@ -157,11 +157,39 @@ CSS Code中，我们同时设置了 `margin-top/bottom` 的值都为 10px。你�
 
 ![书写模式改变IE6浮动双倍margin bug方向](http://demo.doyoe.com/css/margin/images/double-margin-writing-mode-on-ie6-2.png) （图七）
 
-你会惊讶的发现，`margin-top/bottom` 两个方向都出现了 double，这真是一件好神奇的事，说实话，我也不明白。但事实胜于雄辩：`DEMO6` [书写模式纵向时margin-top/bottom都将double](http://demo.doyoe.com/css/margin/bug/double-margin-tbrl-2.html)
+你会惊讶的发现，`margin-top/bottom` 两个方向都出现了 double，这真是一件好神奇的事，事实胜于雄辩：`DEMO6` [书写模式纵向时margin-top/bottom都将double](http://demo.doyoe.com/css/margin/bug/double-margin-tbrl-2.html)
 
-未完待续。。。
+写到这，关于IE6浮动双倍margin bug就说的差不多了，包括触发方式，各种情景下的变化，还有解决方案。哦，解决方案貌似还没写...
 
+### fix IE6浮动双倍margin bug
 
+我们以 `DEMO1` 作为需要fix的case
+
+#### 给IE6在会 double margin 的方向上设置小一倍的margin值，如下：
+
+#### CSS
+
+    #demo p{
+        float:left;
+        margin-left:10px;
+        _margin-left:5px;
+    }
+
+恩，IE6的hack，就不再赘述了。不过这种处理方式有一个明显的缺陷，那就是不够灵活，无法通用。因为当标准 margin 值改变时，这个值就得变化。所以不推荐使用这种方式。
+
+#### display:inline
+
+#### CSS
+
+    #demo p{
+    	_display:inline;
+        float:left;
+        margin-left:10px;
+    }
+
+恩，仍然是only ie6的hack，不过这个方案更Cool，它不需要care margin值到底是什么，足够灵活。看具体的例子吧：`DEMO7` [修复IE6浮动双倍margin bug](http://demo.doyoe.com/css/margin/bug/double-margin-fix.html)。至于为什么会有这种解法，我想只能问问微软的童鞋了。
+
+完全没想到，单一个双边距bug就写了这么长的篇幅，本打算一篇文章涵盖一堆bug，看来得分篇了。
 
 ### margin系列文章：
 
