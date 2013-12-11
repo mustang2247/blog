@@ -73,7 +73,22 @@ CSS Code不变，加多2个浮动元素，再来看具体情况，有图有真�
 
 #### double margin只发生在float:left时？
 
-你觉得呢？结果当然不会是这样。往前看，我们只说过在同个浮动方向的第一个浮动元素会double margin，并没有说 `float:left`
+你觉得呢？结果当然不会是这样。在之前，我们只说过在同个浮动方向的第一个浮动元素会double margin，并没有说只有 `float:left` 才触发。
+
+我们将 `DEMO1` 的CSS简单改改，HTML不变
+
+#### CSS
+
+    #demo p{
+        float:right;
+        margin-right:10px;
+    }
+
+结果会是怎样呢？看 `图四`：
+
+![IE6 double margin也会发生在float:right时](http://demo.doyoe.com/css/margin/images/double-margin-on-ie6-3.png) （图四）
+
+在图四个，我们看到右侧的外边距明显比指定值 `margin-right:10px` 要大，恩，确实，它是20px，也double了。
 
 未完待续。。。
 
