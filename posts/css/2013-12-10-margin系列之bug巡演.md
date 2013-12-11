@@ -18,7 +18,7 @@
 #### 触发方式
 
 * 元素被设置浮动
-* 元素被设置与浮动方向一致的margin值
+* 元素在与浮动一致的方向设置margin值
 
 <!--more-->
 
@@ -93,6 +93,37 @@ CSS Code不变，加多2个浮动元素，再来看具体情况，有图有真�
 我们再看看既有既有左浮动又有有浮动的情况：`DEMO4` [复杂的double margin](http://demo.doyoe.com/css/margin/bug/double-margin-4.html)
 
 好吧，出现了2次 double margin，这看似挺复杂，其实为什么会这样，都讲得比较明白，所以应该能理解？
+
+### double margin 不仅仅出现在margin-left/right
+
+和大多数其它 `margin` 特性一样，double margin 也受书写模式 `writing-mode` 影响。我们在开篇所说的触发条件之一 `元素在与浮动一致的方向设置margin值` ，其实并不完全精确。当 `writing-mode` 为纵向时，会发生 double margin 的方向也相应变成了纵向。
+
+当书写模式 `writing-mode` 纵向时，设置 `float:right` 时，`margin-bottom` 将会double。来看代码：
+
+#### HTML
+
+    <div id="demo">
+        <p>书写模式改变双倍margin bug方向</p>
+    </div>
+    
+#### CSS
+
+    #demo{
+        -webkit-writing-mode:vertical-rl;
+        writing-mode:tb-rl;
+    }
+    #demo p{
+        float:right;
+        margin:10px 0;
+    }
+
+CSS Code中，我们同时设置了 `margin-top/bottom` 的值都为 10px。你预期会发生 double margin 的方向是 top or bottom？看到 `图六` 你就知道了：
+
+![书写模式改变IE6浮动双倍margin bug方向](http://demo.doyoe.com/css/margin/images/double-margin-writing-mode-non-ie6.png) （图六）
+
+图六清晰的验证了 `writing-mode` 会影响 double margin 的方向；并且当设置了 `float:right` 时，只有 `margin-bottom` 会发生 double margin。
+
+
 
 未完待续。。。
 
