@@ -20,6 +20,8 @@
 * 元素被设置浮动
 * 元素被设置与浮动方向一致的margin值
 
+<!--more-->
+
 来看看详细的代码吧：
 
 #### HTML
@@ -35,10 +37,19 @@
         margin-left:10px;
     }
 
+#### 效果对比
+
+![非IE6下浮动无双边距](http://demo.doyoe.com/css/margin/images/double-margin-non-ie6.png) （图一）
+
+图一 是非IE6下的效果
+
+![IE6下浮动双边距](http://demo.doyoe.com/css/margin/images/double-margin-on-ie6.png) （图二）
+
+图二 是IE6下的效果
 
 
 未完待续。。。
-<!--more-->
+
 
 
 ### margin系列文章：
