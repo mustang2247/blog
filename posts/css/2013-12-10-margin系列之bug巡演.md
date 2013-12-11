@@ -88,7 +88,11 @@ CSS Code不变，加多2个浮动元素，再来看具体情况，有图有真�
 
 ![IE6 double margin也会发生在float:right时](http://demo.doyoe.com/css/margin/images/double-margin-on-ie6-3.png) （图四）
 
-在图四个，我们看到右侧的外边距明显比指定值 `margin-right:10px` 要大，恩，确实，它是20px，也double了。
+在图四中，我们看到右侧的外边距明显比指定值 `margin-right:10px` 要大，恩，确实，它是20px，也double了。瞧瞧：`DEMO3` [IE6 double margin也会发生在float:right时](http://demo.doyoe.com/css/margin/bug/double-margin-3.html)
+
+我们再看看既有既有左浮动又有有浮动的情况：`DEMO4` [复杂的double margin](http://demo.doyoe.com/css/margin/bug/double-margin-4.html)
+
+好吧，出现了2次 double margin，这看似挺复杂，其实为什么会这样，都讲得比较明白，所以应该能理解？
 
 未完待续。。。
 
