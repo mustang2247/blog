@@ -157,7 +157,7 @@ CSS Code中，我们同时设置了 `margin-top/bottom` 的值都为 10px。你�
 
 ![书写模式改变IE6浮动双倍margin bug方向](http://demo.doyoe.com/css/margin/images/double-margin-writing-mode-on-ie6-2.png) （图七）
 
-你会惊讶的发现，`margin-top/bottom` 两个方向都出现了 double，这真是一件好神奇的事，说实话，我也不明白。事实胜于雄辩：`DEMO6` [书写模式改变IE6浮动双倍margin bug方向](http://demo.doyoe.com/css/margin/bug/double-margin-tbrl-2.html)
+你会惊讶的发现，`margin-top/bottom` 两个方向都出现了 double，这真是一件好神奇的事，说实话，我也不明白。但事实胜于雄辩：`DEMO6` [书写模式纵向时margin-top/bottom都将double](http://demo.doyoe.com/css/margin/bug/double-margin-tbrl-2.html)
 
 未完待续。。。
 
