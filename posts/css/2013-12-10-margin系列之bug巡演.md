@@ -5,7 +5,7 @@
 * IE6浮动双倍margin bug；
 * IE6浮动相邻元素3px bug；
 * IE6/7 clear引发的margin-top bug；
-* 待补充有一堆
+* 待补充的有一堆
 
 ### 为bug生为bug死为bug欲仙欲死的日子
 
