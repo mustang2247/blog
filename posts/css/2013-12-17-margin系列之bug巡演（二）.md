@@ -30,6 +30,8 @@
 
 如上代码，你认为 `.b` 是否会相对自身向上偏移 20px 呢？如果你真这么觉得，那就错了。
 
+未完待续。。。
+
 ### margin系列文章：
 
 * [margin系列之内秀篇（二）](http://blog.doyoe.com/~posts/css/2013-12-14-margin%E7%B3%BB%E5%88%97%E4%B9%8B%E5%86%85%E7%A7%80%E7%AF%87%EF%BC%88%E4%BA%8C%EF%BC%89.md)
