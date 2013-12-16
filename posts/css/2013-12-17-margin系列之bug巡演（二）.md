@@ -40,6 +40,8 @@
 
 ![clear margin](http://demo.doyoe.com/css/margin/images/clear-margin-on-ie67.png)（图二）
 
+### 为什么会这样？
+
 我们已经说过设置了 `clear` 为非 `none` 值的元素不允许出现在之前浮动元素的底部margin边界之上。也就是说必须在垂直方向上递次堆叠却不能重合。但是其margin可以和之前浮动元素重合。
 
 未完待续。。。
