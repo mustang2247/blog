@@ -6,8 +6,25 @@
 
 ### w3c关于 clear 特性的描述
 
-拥有 'clear' 特性的元素顶部 'border-box' 在垂直方向不可位于之前浮动元素的底部 'margin-box' 之上。
+设置了 `clear` 为非 `none` 值的元素，其顶部 `border` 边界 在垂直方向不允许出现在之前的浮动元素底部 `margin` 之上。
 
+什么意思呢？用段代码来阐述：
+
+#### HTML
+
+    <div class="a">float:left</div>
+    <div class="b">clear:left</div>
+
+#### CSS
+
+    .a{
+        float:left;
+        margin:10px;
+    }
+    .b{
+        clear:left;
+        margin-top:-30px;
+    }
 
 ### margin系列文章：
 
