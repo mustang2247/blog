@@ -21,14 +21,22 @@
 
     .a{
         float:left;
+        height:30px;
         margin:20px;
     }
     .b{
         clear:left;
-        margin-top:-20px;
+        height:30px;
+        margin-top:-30px;
     }
 
-如上代码，你认为 `.b` 是否会相对自身向上偏移 20px 呢？如果你真这么觉得，那就错了。
+如上代码，你认为 `.b` 是否会相对自身向上偏移 30px 呢？然后盖住 `.a` 底部 10px？如果你真这么觉得，那就错了。
+
+来看上述代码，我们会得到什么样的结果，如 `图一`：
+
+![clear margin](http://demo.doyoe.com/css/margin/images/clear-margin.png)（图一）
+
+我们已经说过设置了 `clear` 为非 `none` 值的元素不允许出现在之前浮动元素的底部margin边界之上。也就是说必须在垂直方向上递次堆叠却不能重合。但是其margin可以和之前浮动元素重合。
 
 未完待续。。。
 
