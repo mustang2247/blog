@@ -21,7 +21,7 @@
 
     .a{
         float:left;
-        margin:10px;
+        margin:20px;
     }
     .b{
         clear:left;
