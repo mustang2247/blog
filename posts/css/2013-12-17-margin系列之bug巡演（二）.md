@@ -82,6 +82,22 @@
 
 是的，在某个特殊的点，这一切会发生改变，并非全然无效。
 
+这个特殊点是什么？
+
+特殊点是浮动元素实际高度，即浮动元素的 margin + border + padding + height，拿我们的 `DEMO2` 来详述：
+
+`DEMO2` 中的浮动元素 `.a` 的实际高度为 30 + 20*2 = 70px，也就说当 `.b` 的 `margin-top` 大于 70px 时，超过的部分将会使得 `.b` 发生偏移。
+
+### CSS
+
+    .b{
+        clear:left;
+        height:30px;
+        margin-top:100px;
+    }
+
+我们将 `DEMO2` 中的 `margin-top` 改成 100px，再看看具体情况 `DEMO3`：[clear margin 验证2](http://demo.doyoe.com/css/margin/bug/clear-margin-3.html)
+
 未完待续。。。
 
 ### margin系列文章：
