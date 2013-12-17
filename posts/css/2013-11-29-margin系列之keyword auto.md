@@ -1,19 +1,19 @@
 ## margin系列之keyword auto
 
-### margin的重要性：
+## margin的重要性：
 
 有个不容置疑的事，前端开发人员没有人能够忽视CSS `margin`的重要性。CSS coding时，margin的使用频率就如同呼吸般频繁，如果我可以说得夸张点的话。
 
 margin作为CSS盒模型基本组成要素之一，是非常Basis的一个技术手段，所以我想对于它的一些基本情况应该不用太介绍了？
 
-### margin经常被用来做什么？
+## margin经常被用来做什么？
 
 * 让块元素水平居中；
 * 让元素之间留有舒适的留白；
 * 处理特殊的first或last，大家懂的？
 * 一些布局；
 
-### 需要注意的地方：
+## 需要注意的地方：
 
 * margin折叠；
 * margin的百分比值；
@@ -28,11 +28,11 @@ margin作为CSS盒模型基本组成要素之一，是非常Basis的一个技术
 
 <!--more-->
 
-### keyword auto
+## keyword auto
 
 auto是margin的可选值之一。相信大家平时使用auto值时，最多的用法大概是 `margin: 0 auto;` 和 `margin: auto;`，恩，是的，块元素水平居中。让我们来看看代码实现：
 
-#### CSS:
+### CSS:
 
 ```css
 #demo{
@@ -41,7 +41,7 @@ auto是margin的可选值之一。相信大家平时使用auto值时，最多的
 }
 ```
 
-#### HTML:
+### HTML:
 ```html
 <div id="demo">
 	<p>恩，我就是那个需要水平居中的家伙。</p>
@@ -70,7 +70,7 @@ auto是margin的可选值之一。相信大家平时使用auto值时，最多的
 
 OK，聊了这么多，我们回到默认的 `writing-mode: horizontal-tb;` 和 `direction: ltr;` 的情况继续往下，后面的话题都基于这个前提。 
 
-### 为什么auto能实现水平居中？
+## 为什么auto能实现水平居中？
 
 这是因为水平方向的 `auto`，其计算值取决于可用空间（剩余空间）。
 
@@ -107,14 +107,15 @@ OK，聊了这么多，我们回到默认的 `writing-mode: horizontal-tb;` 和 
 
 至于垂直方向上为什么无法居中，还有更深层的原因吗？大家可以思考一下。
 
-### 可参考：
+## 可参考：
 
 * http://www.w3.org/TR/css3-box/#margins
 * http://dev.w3.org/csswg/css-box/#the-margin-properties
 * http://dev.w3.org/csswg/css-box/#Calculating
 
-### margin系列文章：
+## margin系列文章：
 
+* [margin系列之bug巡演（二）](http://blog.doyoe.com/~posts/css/2013-12-17-margin%E7%B3%BB%E5%88%97%E4%B9%8Bbug%E5%B7%A1%E6%BC%94%EF%BC%88%E4%BA%8C%EF%BC%89.md)
 * [margin系列之内秀篇（二）](http://blog.doyoe.com/~posts/css/2013-12-14-margin%E7%B3%BB%E5%88%97%E4%B9%8B%E5%86%85%E7%A7%80%E7%AF%87%EF%BC%88%E4%BA%8C%EF%BC%89.md)
 * [margin系列之bug巡演](http://blog.doyoe.com/~posts/css/2013-12-10-margin%E7%B3%BB%E5%88%97%E4%B9%8Bbug%E5%B7%A1%E6%BC%94.md)
 * [margin系列之内秀篇](http://blog.doyoe.com/~posts/css/2013-12-06-margin%E7%B3%BB%E5%88%97%E4%B9%8B%E5%86%85%E7%A7%80%E7%AF%87.md)

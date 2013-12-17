@@ -98,10 +98,20 @@
 
 我们将 `DEMO2` 中的 `margin-top` 改成 100px，再看看具体情况 `DEMO3`：[clear margin 验证2](http://demo.doyoe.com/css/margin/bug/clear-margin-3.html)，你可以手动的修改其 `margin-top` 值，看看临界值是否如前所述。
 
-未完待续。。。
+## 解决方案
 
-### margin系列文章：
+* 尽量避免为设置了 `clear` 为非 `none` 值的元素定义margin-top；
+* 如果必须，可以将拥有 `clear` 特性的元素作为容器，在其子元素上设置margin-top；
+* 视情况换成padding-top；
 
+## 要注意的问题
+
+`.a` 和 `.b` 需要在处在同一个块级上下文内，或者其包含块拥有 `padding-top/border-top`，否则临界值情况将失效，不过任何IE目前都不需要此前置条件。查看 `DEMO4`：[clear margin 验证3](http://demo.doyoe.com/css/margin/bug/clear-margin-4.html)
+
+
+## margin系列文章：
+
+* [margin系列之bug巡演（二）](http://blog.doyoe.com/~posts/css/2013-12-17-margin%E7%B3%BB%E5%88%97%E4%B9%8Bbug%E5%B7%A1%E6%BC%94%EF%BC%88%E4%BA%8C%EF%BC%89.md)
 * [margin系列之内秀篇（二）](http://blog.doyoe.com/~posts/css/2013-12-14-margin%E7%B3%BB%E5%88%97%E4%B9%8B%E5%86%85%E7%A7%80%E7%AF%87%EF%BC%88%E4%BA%8C%EF%BC%89.md)
 * [margin系列之bug巡演](http://blog.doyoe.com/~posts/css/2013-12-10-margin%E7%B3%BB%E5%88%97%E4%B9%8Bbug%E5%B7%A1%E6%BC%94.md)
 * [margin系列之内秀篇](http://blog.doyoe.com/~posts/css/2013-12-06-margin%E7%B3%BB%E5%88%97%E4%B9%8B%E5%86%85%E7%A7%80%E7%AF%87.md)

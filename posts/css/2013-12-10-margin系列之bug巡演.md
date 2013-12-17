@@ -1,21 +1,21 @@
 ## margin系列之bug巡演
 
-### 我所知道的浏览器margin bug
+## 我所知道的浏览器margin bug
 
 * IE6浮动双倍margin bug；
 * IE6浮动相邻元素3px bug；
 * IE6/7 clear引发的margin-top bug；
 * 待补充的有一堆
 
-### 为bug生为bug死为bug欲仙欲死的日子
+## 为bug生为bug死为bug欲仙欲死的日子
 
 各浏览器的实现差异或者由此而引入的错误，一直都是前端开发人员的梦魇。相信大多数的前端都为此而精疲力尽过，浏览器bug你所知有几？
 
-### IE6浮动双倍margin bug
+## IE6浮动双倍margin bug
 
 这当是IE6最为经典的bug之一。高大上的前端，你肯定从未与其失之交臂过。
 
-### 触发方式
+## 触发方式
 
 * 元素被设置浮动
 * 元素在与浮动一致的方向上设置margin值
@@ -24,20 +24,20 @@
 
 来看看详细的代码吧：
 
-#### HTML
+### HTML
 
     <div id="demo">
         <p>IE6下浮动方向上的margin值将会双倍于其指定值</p>
     </div>
 
-#### CSS
+### CSS
 
     #demo p{
         float:left;
         margin-left:10px;
     }
 
-#### 效果对比
+### 效果对比
 
 ![非IE6下浮动无双边距](http://demo.doyoe.com/css/margin/images/double-margin-non-ie6.png) （图一）
 
@@ -51,13 +51,13 @@
 
 很开心告诉你，问题要比这还更复杂一些，接着往下看。
 
-### 同个浮动方向的元素只有第一个元素会double margin
+## 同个浮动方向的元素只有第一个元素会double margin
 
 `double margin` 并不会发生在所有的浮动元素上，同个包含块内，在相同的浮动方向上，它只发生在第一个浮动元素上。
 
 用代码说话：
 
-#### HTML
+### HTML
 
     <div id="demo">
         <p>第一个float:left</p>
@@ -71,13 +71,13 @@ CSS Code不变，加多2个浮动元素，再来看具体情况，有图有真�
 
 看到图三结果一目了然，三个 `float:left` 的元素只有第一个元素才 `double margin` 了。用个例子来终结它：`DEMO2` [同个浮动方向的元素只有第一个元素会double margin](http://demo.doyoe.com/css/margin/bug/double-margin-2.html)
 
-### double margin只发生在float:left时？
+## double margin只发生在float:left时？
 
 你觉得呢？结果当然不会是这样。在之前，我们只说过在同个浮动方向的第一个浮动元素会double margin，并没有说只有 `float:left` 才触发。
 
 我们将 `DEMO1` 的CSS简单改改，HTML不变
 
-#### CSS
+### CSS
 
     #demo p{
         float:right;
@@ -90,11 +90,11 @@ CSS Code不变，加多2个浮动元素，再来看具体情况，有图有真�
 
 在图四中，我们看到右侧的外边距明显比指定值 `margin-right:10px` 要大，恩，确实，它是20px，也double了。瞧瞧：`DEMO3` [IE6 double margin也会发生在float:right时](http://demo.doyoe.com/css/margin/bug/double-margin-3.html)
 
-### 既有左浮动又有右浮动的情况将会是怎样呢？
+## 既有左浮动又有右浮动的情况将会是怎样呢？
 
 我们先来将代码呈上：
 
-#### HTML
+### HTML
 
     <div id="demo">
         <p class="a">1 float:left</p>
@@ -103,7 +103,7 @@ CSS Code不变，加多2个浮动元素，再来看具体情况，有图有真�
         <p class="d">4 float:right</p>
     </div>
     
-#### CSS
+### CSS
 
     #demo .a,#demo .b{
         float:left;
@@ -120,19 +120,19 @@ CSS Code不变，加多2个浮动元素，再来看具体情况，有图有真�
 
 左右都 double margin 了，这看似挺复杂，其实为什么会这样，前面都讲得比较明白了，所以应该能理解？本例也奉上：`DEMO4` [复杂的double margin](http://demo.doyoe.com/css/margin/bug/double-margin-4.html)
 
-### double margin 不仅仅出现在margin-left/right
+## double margin 不仅仅出现在margin-left/right
 
 和大多数其它 `margin` 特性一样，double margin 也受书写模式 `writing-mode` 影响。我们在开篇所说的触发条件之一 `元素在与浮动一致的方向设置margin值` ，其实并不完全精确。当 `writing-mode` 为纵向时，会发生 double margin 的方向也相应变成了纵向。
 
 当书写模式 `writing-mode` 纵向时，设置 `float:right` 时，会发生什么？来看代码：
 
-#### HTML
+### HTML
 
     <div id="demo">
         <p>书写模式改变双倍margin bug方向</p>
     </div>
     
-#### CSS
+### CSS
 
     #demo{
         -webkit-writing-mode:vertical-rl;
@@ -149,7 +149,7 @@ CSS Code中，我们同时设置了 `margin-top/bottom` 的值都为 10px。你�
 
 图六清晰的验证了 `writing-mode` 会影响 double margin 的方向；并且当设置了 `float:right` 时，只有 `margin-bottom` 会 double。看看示例吧：`DEMO5` [书写模式改变IE6浮动双倍margin bug方向](http://demo.doyoe.com/css/margin/bug/double-margin-tbrl.html)
 
-### `float:left` 时， double margin 的将会是 top or bottom？
+## `float:left` 时， double margin 的将会是 top or bottom？
 
 大家再猜猜，在书写模式为纵向时，设置了 `float:left`，结果又将会如何？
 
@@ -161,13 +161,13 @@ CSS Code中，我们同时设置了 `margin-top/bottom` 的值都为 10px。你�
 
 写到这，关于IE6浮动双倍margin bug就说的差不多了，包括触发方式，各种情景下的变化，还有解决方案。哦，解决方案貌似还没写...
 
-### fix IE6浮动双倍margin bug
+## fix IE6浮动双倍margin bug
 
 我们以 `DEMO1` 作为需要fix的case
 
-#### 给IE6在会 double margin 的方向上设置小一倍的margin值，如下：
+### 给IE6在会 double margin 的方向上设置小一倍的margin值，如下：
 
-#### CSS
+### CSS
 
     #demo p{
         float:left;
@@ -177,9 +177,9 @@ CSS Code中，我们同时设置了 `margin-top/bottom` 的值都为 10px。你�
 
 恩，IE6的hack，就不再赘述了。不过这种处理方式有一个明显的缺陷，那就是不够灵活，无法通用。因为当标准 margin 值改变时，这个值就得变化。所以不推荐使用这种方式。
 
-#### display:inline
+### display:inline
 
-#### CSS
+### CSS
 
     #demo p{
     	_display:inline;
@@ -191,8 +191,9 @@ CSS Code中，我们同时设置了 `margin-top/bottom` 的值都为 10px。你�
 
 完全没想到，单一个双边距bug就写了这么长的篇幅，本打算一篇文章涵盖一堆bug，看来得分篇了。
 
-### margin系列文章：
+## margin系列文章：
 
+* [margin系列之bug巡演（二）](http://blog.doyoe.com/~posts/css/2013-12-17-margin%E7%B3%BB%E5%88%97%E4%B9%8Bbug%E5%B7%A1%E6%BC%94%EF%BC%88%E4%BA%8C%EF%BC%89.md)
 * [margin系列之内秀篇（二）](http://blog.doyoe.com/~posts/css/2013-12-14-margin%E7%B3%BB%E5%88%97%E4%B9%8B%E5%86%85%E7%A7%80%E7%AF%87%EF%BC%88%E4%BA%8C%EF%BC%89.md)
 * [margin系列之bug巡演](http://blog.doyoe.com/~posts/css/2013-12-10-margin%E7%B3%BB%E5%88%97%E4%B9%8Bbug%E5%B7%A1%E6%BC%94.md)
 * [margin系列之内秀篇](http://blog.doyoe.com/~posts/css/2013-12-06-margin%E7%B3%BB%E5%88%97%E4%B9%8B%E5%86%85%E7%A7%80%E7%AF%87.md)
