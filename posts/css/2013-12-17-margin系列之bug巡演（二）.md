@@ -40,7 +40,7 @@
 
 ![clear margin](http://demo.doyoe.com/css/margin/images/clear-margin-on-ie67.png)（图二）
 
-不论你相信与否，看个例子你就明白了 `DEMO1`：[clear margin 猜想](http://demo.doyoe.com/css/margin/bug/clear-margin.htm)，你会发现就算将 `margin-top` 去掉，`.b` 的位置也丝毫不会改变。
+不论你相信与否，看个例子你就明白了 `DEMO1`：[clear margin 猜想](http://demo.doyoe.com/css/margin/bug/clear-margin.html)，你会发现就算将 `margin-top` 去掉，`.b` 的位置也丝毫不会改变。
 
 ## 为什么会这样？
 
@@ -72,7 +72,13 @@
 
 ![clear margin](http://demo.doyoe.com/css/margin/images/clear-margin-2.png)（图三）
 
-图中的黄色区域是 `.b` 的 `margin-top`，你会发现，它可以和 `.a` 的任何区域重合
+图中的黄色区域是 `.b` 的 `margin-top`，你会发现，它可以和 `.a` 的任何区域重合。同时，你也可以发现 `图三` 和 `图一` 居然是一样的效果，`.b` 的实际位置都没变化过。来看例子 `DEMO2`：[clear margin 验证](http://demo.doyoe.com/css/margin/bug/clear-margin-2.html)
+
+这是否说明拥有 `clear` 特性的元素对其之前的浮动元素没有任何影响？因为不论是正值还是负值，其位置都不会发生变化。
+
+如果你这样想，那你就又错了。
+
+
 
 未完待续。。。
 
