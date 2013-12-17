@@ -4,7 +4,7 @@
 
 我知道，这是一个被谈及较少的bug，但我几乎可以肯定你在遇见过的同时并没有把它当成是一个bug。
 
-### w3c关于 clear 特性的描述
+## w3c关于 clear 特性的描述
 
 设置了 `clear` 为非 `none` 值的元素，其顶部 `border` 边界在垂直方向不允许出现在之前的浮动元素底部 `margin` 之上。
 
@@ -12,12 +12,12 @@
 
 什么意思呢？用段代码来阐述：
 
-#### HTML
+### HTML
 
     <div class="a">float:left</div>
     <div class="b">clear:left</div>
 
-#### CSS
+### CSS
 
     .a{
         float:left;
@@ -40,9 +40,37 @@
 
 ![clear margin](http://demo.doyoe.com/css/margin/images/clear-margin-on-ie67.png)（图二）
 
-### 为什么会这样？
+不论你相信与否，看个例子你就明白了 `DEMO1`：[clear margin 猜想](http://demo.doyoe.com/css/margin/bug/clear-margin.htm)，你会发现就算将 `margin-top` 去掉，`.b` 的位置也丝毫不会改变。
 
-我们已经说过设置了 `clear` 为非 `none` 值的元素不允许出现在之前浮动元素的底部margin边界之上。也就是说必须在垂直方向上递次堆叠却不能重合。但是其margin可以和之前浮动元素重合。
+## 为什么会这样？
+
+我们已经说过设置了 `clear` 为非 `none` 值的元素其顶部 `border` 边界不允许出现在之前浮动元素的底部margin边界之上。也就是说必须在垂直方向上递次堆叠却不能重合。
+
+所以说高级浏览器是遵循w3c规范的，而IE6/7的实现明显有悖该规则。
+
+虽然拥有 `clear` 特性的元素其 `border` 顶部边界不允许超越之前浮动元素的底部margin边界之上，但是其margin可以和之前浮动元素的任何区域重合。我们稍微改下之前代码：
+
+### HTML
+
+    <div class="a">float:left</div>
+    <div class="b">clear:left</div>
+
+### CSS
+
+    .a{
+        float:left;
+        height:30px;
+        margin:20px;
+    }
+    .b{
+        clear:left;
+        height:30px;
+        margin-top:50px;
+    }
+
+我们将 `.b` 的 `margin-top` 修改为一个正值，能得到如下 `图三`：
+
+![clear margin](http://demo.doyoe.com/css/margin/images/clear-margin-2.png)（图三）
 
 未完待续。。。
 
