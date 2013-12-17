@@ -72,6 +72,8 @@
 
 ![clear margin](http://demo.doyoe.com/css/margin/images/clear-margin-2.png)（图三）
 
+图中的黄色区域是 `.b` 的 `margin-top`，你会发现，它可以和 `.a` 的任何区域重合
+
 未完待续。。。
 
 ### margin系列文章：
