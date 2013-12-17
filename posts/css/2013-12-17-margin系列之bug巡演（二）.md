@@ -100,13 +100,17 @@
 
 ## 解决方案
 
+IE6/7下由 `clear` 特性引发的 `margin-top` bug，并没有像 double margin 那样的万精油 `display:inline` 解决方案，所以需要寻求的是让IE6/7和其它浏览器绕过此问题来进行解决。
+
+例如：
+
 * 尽量避免为设置了 `clear` 为非 `none` 值的元素定义margin-top；
 * 如果必须，可以将拥有 `clear` 特性的元素作为容器，在其子元素上设置margin-top；
 * 视情况换成padding-top；
 
 ## 要注意的问题
 
-`.a` 和 `.b` 需要在处在同一个块级上下文内，或者其包含块拥有 `padding-top/border-top`，否则临界值情况将失效，不过任何IE目前都不需要此前置条件。查看 `DEMO4`：[clear margin 验证3](http://demo.doyoe.com/css/margin/bug/clear-margin-4.html)
+`.a` 和 `.b` 需要在处在同一个块级上下文内，或者其包含块拥有 `padding-top/border-top`，否则临界值情况将失效，不过任何IE目前都不需要此前置条件。用IE和非IE查看 `DEMO4`：[clear margin 验证3](http://demo.doyoe.com/css/margin/bug/clear-margin-4.html)
 
 
 ## margin系列文章：
