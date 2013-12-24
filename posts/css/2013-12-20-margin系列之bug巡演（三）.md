@@ -4,7 +4,7 @@
 
 你会猛然觉得，这是正解啊，因为 `button` 或者 `input type button类型` 的元素是 `inline-level` 的。
 
-不对啊，`button` 应该是 `inline-block` 吧？
+不对啊，`button` 应该是 `inline` 的吧？哦，可能是 `inline-block` ？
 
 在这之前，我们似乎要先明确一些基础知识。
 
@@ -37,7 +37,7 @@
 * flex
 * 如果position既不是static也不是relative、float不是none或者元素是根元素，当display:inline-table时，display的计算值为table；当display值为 inline | inline-block | run-in | table-* 时，display的计算值为block
 
-有如上情况时的元素均被称之为 `block-lavel` 元素。需要明确的是 `block-level` 和 `block` 也不是同一个概念，所以如果你认为 `display` 值为 `list-item` 的 li 不是 块级元素，那就错了。 
+有如上情况时的元素均被称之为 `block-lavel` 元素。同时 `block-level` 和 `block` 也不是同一个概念，所以如果你认为 `display` 值为 `list-item` 的 li 不是 块级元素，那就错了。
 
 看到这里，你对 `块级元素`，`块元素`，`行内级元素`，`行内元素` 这个4个概念，应该已经有了比较清晰的了解？
 
@@ -47,7 +47,7 @@
 * 当一个块级元素定义了 `float` 值为非 `none` 之外的值时，margin-right/left auto 的计算值为0；
 * 非块级元素的margin-right/left auto 的计算值为0；
 
-计算值为0，即说明其应用使用值的意图失败。
+计算值为0，即说明其应用使用值的意图失败。所以在有如上情形的场景中，都无法使用 `auto` 来实现水平居中。同时也说明了，只有 `normal flow` 下的 `block-level` 才能应用 margin keyword auto。
 
 ## margin可以应用于所有元素吗？
 
