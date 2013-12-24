@@ -47,7 +47,7 @@
 * 当一个块级元素定义了 `float` 值为非 `none` 之外的值时，margin-right/left auto 的计算值为0；
 * 非块级元素的margin-right/left auto 的计算值为0；
 
-计算值为0，即说明其应用使用值的意图失败。所以在有如上情形的场景中，都无法使用 `auto` 来实现水平居中。同时也说明了，只有 `normal flow` 下的 `block-level` 才能应用 margin keyword auto。
+计算值为0，即说明其应用使用值的意图失败。所以在有如上情形的场景中，都无法使用 `auto` 来实现水平居中。同时也说明了，只有 `normal flow` 的 `block-level` 才能应用 margin keyword auto。
 
 ## margin可以应用于所有元素吗？
 
@@ -94,6 +94,8 @@ img, object, button, input, textarea, select等
     span{margin:5px 10px;}
 
 结果发现 `span` 的水平方向上的 `margin` 定义生效了，但垂直方向上的 `margin` 定义却没被应用。
+
+是的，这就是行内非置换元素使用 `margin` 时的表征，所以对各种特性的理解，在让自己的代码更有效上是大有裨益的。
 
 ## 回归正题
 
