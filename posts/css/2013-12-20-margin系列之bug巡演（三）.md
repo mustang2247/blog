@@ -47,19 +47,23 @@
 * 当一个块级元素定义了 `float` 值为非 `none` 之外的值时，margin-right/left 的计算值为0；
 * 非块级元素的margin-right/left 的计算值为0；
 
+计算值为0，即说明其应用使用值的意图失败。
+
 ## margin可以应用于所有元素吗？
 
 这显然不行。准确的说：margin可以应用在除某些table-*元素和某些行内元素之外的所有元素上。
 
-## 和margin亲近的table-*系标签
+### 和margin亲近的table-*系元素
 
 * table
 * inline-table
 * table-caption
 
-除了 `display` 值为以上3种之外的 `table系` 标签，都不能应用 `margin` ，比如：th, td。
+除了 `display` 值为以上3种之外的 `table系` 元素，都不能应用 `margin` ，比如：th, td。
 
+### 和margin亲近的 inline-level 元素
 
+我之前面试的时候常会问题，行内级元素不能设置宽高对吗？大部分人会告诉我说是；然后我又会问，那为什么 `img` 可以设置宽高呢？有人会告诉我，因为 `img` 是个特殊的元素？接着我又会问题，`img` 是如何特殊的？然后，然后就没然后了，因为没声音了。
 
 * apply
 * animate
