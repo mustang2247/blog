@@ -116,6 +116,8 @@ img, object, button, input, textarea, select等
 
 是的，所有浏览器都和预期是一样，实现了水平居中，但是却出现了奇葩的IE8，完全无效，甚至不如原始社会的IE6。来看看示例 `DEMO1`：[IE8按钮margin auto居中失效Bug](http://demo.doyoe.com/css/margin/bug/button-auto-margin-bug.html)
 
+通过以上例子，你有没有突然感觉到，如果要让一个置换元素在包含块中水平居中，出乎预料的简单，只需要 `display:block;margin:auto;` 即可。
+
 ## 注意事项
 
 令人意外的是，只有 `button` 和 input type 为 button 相关元素的时候，在IE8中才会水平居中失效；如: `input type text` 或 `img` 时，margin keyword auto 运作正常。
