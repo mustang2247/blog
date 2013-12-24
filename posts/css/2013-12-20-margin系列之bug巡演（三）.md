@@ -2,9 +2,11 @@
 
 ## IE8按钮margin auto居中失效Bug
 
-你会猛然觉得，这是正解啊，因为 `button` 或者 `input type button类型` 的元素是 `inline-level` 的。`inline-level` 包含 `inline` 和 `inline-*`，这没问题吧？
+你会猛然觉得，这是正解啊，因为 `button` 或者 `input type button类型` 的元素是 `inline-level` 的。
 
-在这之前，似乎要先明确一些基础知识点。
+不对啊，应该是 `inline-block` 吧？
+
+在这之前，我们似乎要先明确一些基础知识。
 
 ## 什么是 block-level 元素？
 
@@ -21,7 +23,7 @@
 * flex
 * 如果position既不是static也不是relative、float不是none或者元素是根元素，当display:inline-table时，display的计算值为table；当display值为 inline | inline-block | run-in | table-* 时，display的计算值为block
 
-以上情况时的元素均被称之为 `block-lavel` 元素。
+以上情况时的元素均被称之为 `block-lavel` 元素。需要明确的是 `block-level` 不等于 `block` ，
 
 ## margin keyword auto只能应用在常规流中的 block-level 元素上
 
