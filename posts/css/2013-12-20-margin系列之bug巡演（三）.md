@@ -106,10 +106,16 @@ img, object, button, input, textarea, select等
 
 令人意外的是，只有 `button` 和 input type 为 button 相关元素的时候，在IE8中才会水平居中失效；如: `input type text` 或 `img` 时，margin keyword auto 运作正常。
 
-未完待续。。。
+## 解决方案
+
+* 给其显示的定义宽度
+* 不改变其display值，包含块text-align:center
+* 其它水平居中方案，如：absolute + 负margin
+
 
 ## margin系列文章：
 
+* [margin系列之bug巡演（三）](http://blog.doyoe.com/~posts/css/2013-12-20-margin%E7%B3%BB%E5%88%97%E4%B9%8Bbug%E5%B7%A1%E6%BC%94%EF%BC%88%E4%B8%89%EF%BC%89.md)
 * [margin系列之bug巡演（二）](http://blog.doyoe.com/~posts/css/2013-12-17-margin%E7%B3%BB%E5%88%97%E4%B9%8Bbug%E5%B7%A1%E6%BC%94%EF%BC%88%E4%BA%8C%EF%BC%89.md)
 * [margin系列之内秀篇（二）](http://blog.doyoe.com/~posts/css/2013-12-14-margin%E7%B3%BB%E5%88%97%E4%B9%8B%E5%86%85%E7%A7%80%E7%AF%87%EF%BC%88%E4%BA%8C%EF%BC%89.md)
 * [margin系列之bug巡演](http://blog.doyoe.com/~posts/css/2013-12-10-margin%E7%B3%BB%E5%88%97%E4%B9%8Bbug%E5%B7%A1%E6%BC%94.md)
