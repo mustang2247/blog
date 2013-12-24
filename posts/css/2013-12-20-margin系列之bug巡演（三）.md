@@ -98,7 +98,7 @@ img, object, button, input, textarea, select等
 
 恩，我们将 `button` 显式的转换为了 `block`，同时我们知道 `button` 作为置换元素，本身具备内在宽高，也就是说这时，我只需要加上 `margin:auto` ，该按钮就应该在其包含块里水平居中。
 
-是的，所有浏览器都和预期是一样的，但是却出现了奇葩的IE8，完全无效，甚至不如原始社会的IE6。
+是的，所有浏览器都和预期是一样，实现了水平居中，但是却出现了奇葩的IE8，完全无效，甚至不如原始社会的IE6。来看看示例 `DEMO1`：[IE8按钮margin auto居中失效Bug](http://demo.doyoe.com/css/margin/bug/button-auto-margin-bug.html)
 
 未完待续。。。
 
