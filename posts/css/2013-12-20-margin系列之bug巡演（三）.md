@@ -92,8 +92,9 @@ img, object, button, input, textarea, select等
     button{display:block;margin:auto;}
 
 ### HTML
-
-    <button>按钮</button>
+    <div id="demo">
+        <button>按钮</button>
+    </div>
 
 恩，我们将 `button` 显式的转换为了 `block`，同时我们知道 `button` 作为置换元素，本身具备内在宽高，也就是说这时，我只需要加上 `margin:auto` ，该按钮就应该在其包含块里水平居中。
 
