@@ -43,9 +43,9 @@
 
 ## margin keyword auto只能应用在常规流中的 block-level 元素上
 
-* 当一个块级元素定义了 `position` 值为非 `static` 和 `relative` 之外的值时，margin-right/left 的计算值为0；
-* 当一个块级元素定义了 `float` 值为非 `none` 之外的值时，margin-right/left 的计算值为0；
-* 非块级元素的margin-right/left 的计算值为0；
+* 当一个块级元素定义了 `position` 值为非 `static` 和 `relative` 之外的值时，margin-right/left auto 的计算值为0；
+* 当一个块级元素定义了 `float` 值为非 `none` 之外的值时，margin-right/left auto 的计算值为0；
+* 非块级元素的margin-right/left auto 的计算值为0；
 
 计算值为0，即说明其应用使用值的意图失败。
 
@@ -81,7 +81,19 @@
 
 img, object, button, input, textarea, select等
 
+## 回归正题
 
+我们本来是想说IE8按钮margin auto居中失效Bug的，扯了不少题外话。
+
+我知道 margin keyword auto 不能应用在处于常规流中的 block-level 之外元素上，所以我有这样的一段代码：
+
+### CSS
+
+    button{display:block;margin:auto;}
+
+### HTML
+
+    <button>按钮</button>
 
 未完待续。。。
 
