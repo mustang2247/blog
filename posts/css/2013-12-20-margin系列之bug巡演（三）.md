@@ -85,7 +85,7 @@ img, object, button, input, textarea, select等
 
 我们本来是想说IE8按钮margin auto居中失效Bug的，扯了不少题外话。
 
-我知道 margin keyword auto 不能应用在处于常规流中的 block-level 之外元素上，所以我有这样的一段代码：
+我们知道 margin keyword auto 不能应用在处于常规流中的 block-level 之外的元素上，所以我有这样的一段代码：
 
 ### CSS
 
@@ -94,6 +94,10 @@ img, object, button, input, textarea, select等
 ### HTML
 
     <button>按钮</button>
+
+恩，我们将 `button` 显式的转换为了 `block`，同时我们知道 `button` 作为置换元素，本身具备内在宽高，也就是说这时，我只需要加上 `margin:auto` ，该按钮就应该在其包含块里水平居中。
+
+是的，所有浏览器都和预期是一样的，但是却出现了奇葩的IE8，完全无效，甚至不如原始社会的IE6。
 
 未完待续。。。
 
