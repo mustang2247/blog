@@ -8,6 +8,8 @@
 
 ## 什么是 block-level 元素？
 
+<!--more-->
+
 `block-level` 指的是 `display` 值为 `block` 的元素吗？我知道不少人一直有这样的认知，不过这不完全准确。
 
 ### `block-level` 元素包含 `display` 值为：
@@ -39,3 +41,5 @@
 
 * apply
 * animate
+
+未完待续。。。
