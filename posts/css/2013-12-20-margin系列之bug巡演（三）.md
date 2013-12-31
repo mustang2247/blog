@@ -37,7 +37,7 @@
 * flex
 * 如果position既不是static也不是relative、float不是none或者元素是根元素，当display:inline-table时，display的计算值为table；当display值为 inline | inline-block | run-in | table-* 时，display的计算值为block
 
-有如上情况时的元素均被称之为 `block-lavel` 元素。同时 `block-level` 和 `block` 也不是同一个概念，所以如果你认为 `display` 值为 `list-item` 的 li 不是 块级元素，那就错了。
+有如上情况时的元素均被称之为 `block-level` 元素。同时 `block-level` 和 `block` 也不是同一个概念，所以如果你认为 `display` 值为 `list-item` 的 li 不是 块级元素，那就错了。
 
 看到这里，你对 `块级元素`，`块元素`，`行内级元素`，`行内元素` 这个4个概念，应该已经有了比较清晰的了解？
 
