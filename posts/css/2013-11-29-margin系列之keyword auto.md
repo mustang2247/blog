@@ -115,6 +115,7 @@ OK，聊了这么多，我们回到默认的 `writing-mode: horizontal-tb;` 和 
 
 ## margin系列文章：
 
+* [margin系列之布局篇](http://blog.doyoe.com/~posts/css/2013-12-31-margin%E7%B3%BB%E5%88%97%E4%B9%8B%E5%B8%83%E5%B1%80%E7%AF%87.md)
 * [margin系列之bug巡演（三）](http://blog.doyoe.com/~posts/css/2013-12-20-margin%E7%B3%BB%E5%88%97%E4%B9%8Bbug%E5%B7%A1%E6%BC%94%EF%BC%88%E4%B8%89%EF%BC%89.md)
 * [margin系列之bug巡演（二）](http://blog.doyoe.com/~posts/css/2013-12-17-margin%E7%B3%BB%E5%88%97%E4%B9%8Bbug%E5%B7%A1%E6%BC%94%EF%BC%88%E4%BA%8C%EF%BC%89.md)
 * [margin系列之内秀篇（二）](http://blog.doyoe.com/~posts/css/2013-12-14-margin%E7%B3%BB%E5%88%97%E4%B9%8B%E5%86%85%E7%A7%80%E7%AF%87%EF%BC%88%E4%BA%8C%EF%BC%89.md)
