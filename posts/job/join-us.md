@@ -5,7 +5,7 @@
 * 开放职位：JSer, CSSer
 * 工作地点：北京苏州街
 * 工作项目：去哪儿网机票频道（包括PC和Touch）、火车票频道
-* 联系人：joy（飘零雾雨）
+* 联系人：joy（[@doyoe](http://weibo.com/doyoe)）
 * 邮箱：joy.du@qunar.com
 
 <!--more-->
