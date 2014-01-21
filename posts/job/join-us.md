@@ -5,8 +5,8 @@
 * 开放职位：JSer, CSSer
 * 工作地点：北京苏州街
 * 工作项目：去哪儿网机票频道（包括PC和Touch）、火车票频道
-* 联 系 人：joy（飘零雾雨）
-* 邮　　箱：joy.du@qunar.com
+* 联系人：joy（飘零雾雨）
+* 邮箱：joy.du@qunar.com
 
 <!--more-->
 
@@ -21,7 +21,7 @@
 
 * 熟练掌握JavaScript，会用原生的JavaScript完成页面展示与交互效果。
 * 熟练掌握CSS, HTML。
-* 熟悉JQuery/QWrap/YUI/MooTools/Dojo等中至少一种框架。
+* 熟悉JQuery/YUI/MooTools/Dojo等中至少一种框架。
 * 善于学习，乐于探索，开朗乐观。
 * 无学历要求。
 
@@ -37,9 +37,9 @@
 
 ### 职位描述
 
+* 负责CSS/HTML的开发规范提出和整理；
 * 负责页面的切图工作；
 * 协同程序员进行页面的调整和修改；
-* 负责网站的页面呈现和重构。
 
 ### 职位要求
 
